@@ -48,7 +48,7 @@ O arquivo ficará assim:
 ```
 3. Com os dois arquivos salvos na sua pasta, abra o terminal e rode:
    ```bash
-   # (Opcional) Força o download da imagem mais recente
+   # Faz o download da imagem mais recente
    docker pull iiimathszl/mural-docker:latest
    
    # Sobe a infraestrutura completa lendo as imagens baixadas
