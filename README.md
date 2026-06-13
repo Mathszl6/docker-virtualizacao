@@ -1,9 +1,8 @@
 # 📌 Mural de Recados Coletivo (Docker & Node.js)
 Este é um projeto acadêmico de um **Mural de Recados Dinâmico e Interativo**, construído com o intuito de demonstrar o uso de **Containerização, Balanceamento de Carga e Persistência de Dados** utilizando o ecossistema Docker.
-![Interface Premium do Mural](https://via.placeholder.com/800x400.png?text=Mural+de+Recados+Interativo) *(adicione um print da sua tela aqui depois!)*
-## ✨ Funcionalidades
+## Funcionalidades
 * **CRUD Completo:** Crie, leia, edite e apague post-its em tempo real.
-* **UI Premium:** Design moderno com *Glassmorphism*, fontes profissionais (Google Fonts) e micro-animações.
+* **UI Premium:** Design moderno com fontes profissionais (Google Fonts) e micro-animações.
 * **Single Page Feel:** Operações de edição e remoção ocorrem em background (usando a *Fetch API*), sem a necessidade de recarregar a tela inteira a cada clique.
 * **Escalabilidade Visível:** A aplicação mostra dinamicamente qual container (Host ID) está renderizando a página para você, provando o funcionamento do *Load Balancer*.
 ## 🛠️ Arquitetura e Tecnologias
@@ -39,24 +38,23 @@ Se você quer apenas **executar a aplicação** em um computador novo (por exemp
 O arquivo ficará assim:
 ```yaml
   app1:
-    image: SEU_USUARIO_AQUI/mural-docker:latest
+    image: iiimathszl/mural-docker:latest
     depends_on:
       - db
   app2:
-    image: SEU_USUARIO_AQUI/mural-docker:latest
+    image: iiimathszl/mural-docker:latest
     depends_on:
       - db
 ```
-*(Não se esqueça de substituir `SEU_USUARIO_AQUI` pelo nome correto do seu usuário no Docker Hub!)*
 3. Com os dois arquivos salvos na sua pasta, abra o terminal e rode:
    ```bash
    # (Opcional) Força o download da imagem mais recente
-   docker pull SEU_USUARIO_AQUI/mural-docker:latest
+   docker pull iiimathszl/mural-docker:latest
    
    # Sobe a infraestrutura completa lendo as imagens baixadas
    docker-compose up -d
    ```
-Apenas com isso, o Docker vai baixar o Nginx, baixar o Redis, baixar o seu Mural da internet e integrar os três em questão de segundos!
+Apenas com isso, o Docker vai baixar o Nginx, baixar o Redis, baixar o Mural via Docker Hub e integrar os três em questão de segundos!
 ---
 ## 🧹 Comandos Extras Úteis
 * Ver se os containers estão rodando:
@@ -76,4 +74,4 @@ Apenas com isso, o Docker vai baixar o Nginx, baixar o Redis, baixar o seu Mural
   docker-compose down
   ```
 ---
-*Projeto desenvolvido por Matheus Silva e Inácio Bezerra.*
+*Projeto desenvolvido por Matheus Felipe Dias da Silva e Inácio Ribeiro Azevedo.*
